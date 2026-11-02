@@ -1,0 +1,136 @@
+/* Główny kontener nawigacji */
+.navbar {
+    padding: 0.75rem 1rem;
+    background-color: #ffffff; /* Domyślne tło, jeśli nie zdefiniowano w .bg-1 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Klasa tła .bg-1 (możesz dostosować kolor według uznania) */
+.bg-1 {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Logo / Marka */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #212529;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+    .navbar-brand:hover {
+        color: #0d6efd;
+    }
+
+/* Lista elementów nawigacji */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    color: #495057;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+    .nav-link:hover {
+        color: #0d6efd;
+        background-color: rgba(13, 110, 253, 0.05);
+    }
+
+    .nav-link.active {
+        color: #0d6efd;
+        font-weight: 600;
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+
+/* Układ formularza i elementów w linii (hstack) */
+.hstack {
+    display: flex;
+    align-items: center;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+/* Pole wyszukiwania */
+.form-control {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .form-control:focus {
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+
+/* Przycisk wyszukiwania */
+.btn-solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-icon {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+}
+
+/* Motyw dodatkowy przycisku (theme-secondary) */
+.theme-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+    .theme-secondary:hover {
+        background-color: #5c636a;
+        border-color: #565e64;
+    }
+
+/* Dopasowanie ikony SVG w przycisku */
+.btn-solid svg {
+    fill: currentColor;
+}
+
+/* Układ responsywny (odpowiednik md:navbar-expand) */
+@media (min-width: 768px) {
+    .navbar.md\:navbar-expand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
